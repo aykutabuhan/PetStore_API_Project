@@ -15,5 +15,4 @@ public class PostPetTest {
 
         response.then().statusCode(200);
     }
-
 }

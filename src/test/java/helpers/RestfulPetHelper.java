@@ -27,4 +27,8 @@ public class RestfulPetHelper extends RestClient {
 
         return post("v2/pet", null, null, postPetBody);
     }
+
+    public Response getPetWithID(int ID){
+        return get("v2/pet/" +ID, null, null, null);
+    }
 }
