@@ -1,6 +1,5 @@
 package models.pets.request;
 
-import java.util.HashMap;
 import java.util.List;
 
 import lombok.Builder;
@@ -14,7 +13,7 @@ public class PostPetBody {
 	private Category category;
 	private String name;
 	private List<String> photoUrls;
-	private HashMap<String, Object> tags;
+	private List<TagsItem> tags;
 	private String status;
 
 	@Data

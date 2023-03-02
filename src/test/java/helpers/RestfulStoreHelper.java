@@ -7,8 +7,8 @@ import util.PropertyUtil;
 
 public class RestfulStoreHelper extends RestClient {
 
-    private final static String BASE_URL = "https://petstore.swagger.io/v2/store/";
-    private final static String PET_ID = PropertyUtil.getProperty("id", "StoreID.property");
+    private static final String BASE_URL = "https://petstore.swagger.io/v2/store/";
+    private static final String PET_ID = PropertyUtil.getProperty("id", "StoreID.property");
 
     public RestfulStoreHelper() {
         super(BASE_URL);
