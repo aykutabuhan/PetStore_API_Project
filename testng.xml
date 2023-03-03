@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2"
+          name="/Users/aykutabuhan/IdeaProjects/PetStore_API_Project">
+        <classes>
+            <class name="tests.pet.PostPetTest"/>
+            <class name="tests.pet.PutUpdatePetTest"/>
+            <class name="tests.pet.GetPetFindStatusTest"/>
+            <class name="tests.pet.GetPetTest"/>
+            <class name="tests.pet.DeletePetTest"/>
+            <class name="tests.store.PostPetOrderTest"/>
+            <class name="tests.store.GetPetOrderTest"/>
+            <class name="tests.store.DeletePetOrderTest"/>
+            <class name="tests.store.GetPetOrderInventoryTest"/>
+            <class name="tests.user.PostCreateUserTest"/>
+            <class name="tests.user.GetUsernameTest"/>
+            <class name="tests.user.PutUpdateUserTest"/>
+            <class name="tests.user.DeleteUserTest"/>
+        </classes>
+    </test>
+</suite>
