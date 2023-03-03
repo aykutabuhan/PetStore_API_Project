@@ -20,9 +20,6 @@ public class PostCreateUserTest {
         Assert.assertEquals(response.as(PostCreateUserResponse.class).getType(), "unknown");
         Assert.assertEquals(response.as(PostCreateUserResponse.class).getCode(), 200);
 
-     //   PropertyUtil.setProperty("Username.property", "username", response.as(PostCreateUserBody.ResponseItem.class)
-      //          .getUsername());
-
         response.then().statusCode(200);
     }
 }

@@ -12,6 +12,6 @@ public class GetUsernameTest {
     public void getUsernameTest(){
         Response response = m_helper.getUsername();
 
-        response.then().statusCode(404);
+        response.then().statusCode(200);
     }
 }

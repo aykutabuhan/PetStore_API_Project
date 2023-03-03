@@ -5,6 +5,9 @@ import io.restassured.response.Response;
 import models.pets.response.PostPetResponse;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import util.PropertyUtil;
+
+import java.io.IOException;
 
 
 public class PostPetTest {
@@ -12,7 +15,7 @@ public class PostPetTest {
     RestfulPetHelper m_helper = new RestfulPetHelper();
 
     @Test
-    public void postPetTest(){
+    public void postPetTest() throws IOException {
         Response response = m_helper.createNewPet();
 
         Assert.assertEquals(response.as(PostPetResponse.class).getId(), 1);
@@ -26,6 +29,8 @@ public class PostPetTest {
         Assert.assertEquals(response.as(PostPetResponse.class).getTags().get(1).getId(), 12);
         Assert.assertEquals(response.as(PostPetResponse.class).getTags().get(1).getName(), "Golden");
         Assert.assertEquals(response.as(PostPetResponse.class).getStatus(), "avaliable");
+
+        PropertyUtil.setProperty("PetID.property", "id", (Integer) response.as(PostPetResponse.class).getId());
 
         response.then().statusCode(200);
     }
